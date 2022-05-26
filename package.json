@@ -1,0 +1,22 @@
+{
+  "name": "projetomfopenclassp3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthoRav/OC_P3_OMF.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnthoRav/OC_P3_OMF/issues"
+  },
+  "homepage": "https://github.com/AnthoRav/OC_P3_OMF#readme",
+  "dependencies": {
+    "sass": "^1.52.1"
+  }
+}
