@@ -1,3 +1,58 @@
 body {
     font-family: 'Roboto', 'Shrikhand', cursive, sans-serif;
 }
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+
+@mixin flexmid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 63px;
+    @include flexmid;
+}
+header img {
+    height: 32px;
+}
+.location {
+    background-color: #EAEAEA;
+    height: 52px;
+    @include flexmid;
+}
+form {
+    font-size: 18px;
+}
+#search {
+    background-color: #EAEAEA;
+    border: #EAEAEA;
+    padding: 5px 15px 5px 15px;
+    font-family: 'Roboto';
+    font-weight: 600;
+    
+}
+.intro {
+    height: 286px;
+    @include flexmid;
+    flex-direction: column;
+    h1 {
+        font-size: 26px;
+        font-weight: 800;
+    }
+    p {
+        font-size: 18px;
+        font-weight: 300;
+    }
+}
+.card, .intro, .steps__card {
+    background-color: #F6F6F6;
+}
+
+
+footer {
+    background-color: #353535;
+}

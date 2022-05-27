@@ -2,4 +2,59 @@ body {
   font-family: "Roboto", "Shrikhand", cursive, sans-serif;
 }
 
+header {
+  height: 63px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  height: 32px;
+}
+
+.location {
+  background-color: #EAEAEA;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  font-size: 18px;
+}
+
+#search {
+  background-color: #EAEAEA;
+  border: #EAEAEA;
+  padding: 5px 15px 5px 15px;
+  font-family: "Roboto";
+  font-weight: 600;
+}
+
+.intro {
+  height: 286px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.intro h1 {
+  font-size: 26px;
+  font-weight: 800;
+}
+.intro p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.card, .intro, .steps__card {
+  background-color: #F6F6F6;
+}
+
+footer {
+  background-color: #353535;
+}
+
 /*# sourceMappingURL=style.css.map */
