@@ -1,5 +1,7 @@
-body {
-  font-family: "Roboto", "Shrikhand", cursive, sans-serif;
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
@@ -22,7 +24,7 @@ header img {
 }
 
 form {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 #search {
@@ -39,6 +41,7 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0 40px 0 40px;
 }
 .intro h1 {
   font-size: 26px;
@@ -49,8 +52,61 @@ form {
   font-weight: 300;
 }
 
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  width: 220px;
+  height: 50px;
+  border-radius: 50px;
+  margin: 20px 0 40px 0;
+}
+
 .card, .intro, .steps__card {
   background-color: #F6F6F6;
+}
+
+.working {
+  height: 440px;
+  margin: 30px 20px 0 20px;
+}
+.working h2 {
+  font-weight: 800;
+  padding: 20px 0 10px 0;
+}
+
+.steps__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  width: 320px;
+  margin-bottom: 30px;
+  font-weight: 600;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
+}
+.steps__card--number {
+  background-color: #9356DC;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  height: 24px;
+  width: 24px;
+  border-radius: 50px;
+  padding: 5px;
+  position: absolute;
+  left: 8px;
+}
+.steps__card i {
+  font-size: 18px;
+  color: gray;
+  position: absolute;
+  left: 55px;
 }
 
 footer {
