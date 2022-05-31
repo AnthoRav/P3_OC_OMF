@@ -5,6 +5,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+.page {
+  max-width: 1400px;
+}
+
 header {
   height: 63px;
   display: flex;
@@ -66,6 +70,7 @@ form {
   height: 50px;
   border-radius: 50px;
   margin: 20px 0 40px 0;
+  box-shadow: 0px 0px 10px 5px rgba(208, 208, 208, 0.65);
 }
 
 .restaurants, .intro, .steps__card {
@@ -86,11 +91,12 @@ form {
   justify-content: center;
   align-items: center;
   height: 75px;
-  max-width: 500px;
+  max-width: 400px;
   margin-bottom: 30px;
   margin-left: 14px;
   font-weight: 600;
   border-radius: 20px;
+  position: relative;
   box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
 }
 .steps__card--number {
@@ -103,7 +109,7 @@ form {
   border-radius: 50px;
   padding: 5px;
   position: absolute;
-  left: 22px;
+  left: -12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,11 +118,11 @@ form {
   font-size: 18px;
   color: gray;
   position: absolute;
-  left: 70px;
+  left: 50px;
 }
 
 .restaurants {
-  padding: 40px 20px 0 20px;
+  padding: 40px 20px 20px 20px;
 }
 .restaurants h2 {
   font-weight: 800;
@@ -124,6 +130,7 @@ form {
 }
 .card {
   height: 250px;
+  max-width: 500px;
   border-radius: 20px;
   margin-bottom: 20px;
   background-color: white;
@@ -207,7 +214,7 @@ footer a {
 .cards {
   background-color: #F6F6F6;
   border-radius: 20px 20px 0 0;
-  padding: 0 20px 0 20px;
+  padding: 0 20px 40px 20px;
 }
 
 .restaurant {
@@ -215,14 +222,33 @@ footer a {
   justify-content: space-between;
 }
 
+.menu_meal {
+  padding-bottom: 10px;
+}
+.menu_meal__name {
+  padding: 5px 0 5px 0;
+  border-bottom: 3px solid #99E2D0;
+}
+
 .meal {
   background-color: white;
   height: 68px;
+  max-width: 400px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 15px;
+  align-items: flex-end;
+  padding: 12px;
+  margin: 15px 0 15px 0;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
+  font-size: 15px;
+}
+.meal p {
+  padding-top: 5px;
+}
+
+.btn_command {
+  margin: 20px auto;
 }
 
 /*# sourceMappingURL=style.css.map */
