@@ -2,7 +2,7 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', 'Shrikhand', sans-serif;
 }
 
 $color-primary: #9356DC;
@@ -25,11 +25,12 @@ header {
 header img {
     height: 32px;
 }
+
 .location {
     background-color: #EAEAEA;
     height: 52px;
     @include flexmid;
-    
+    border-top: 3px solid rgba(208, 208, 208, 0.65)
 }
 form {
     font-size: 16px;
@@ -187,7 +188,9 @@ footer {
     color: white;
     padding: 20px;
     h4 {
+        font-family: 'Shrikhand', cursive;
         font-size: 20px;
+        font-weight: 400;
         padding-bottom: 25px;
     }
     li {
@@ -208,6 +211,9 @@ footer {
 
 /*mise en page menus*/
 
+.header a {
+    font-size: 26px;
+}
 .restaurant_img {
     img {
         width: 100%;
@@ -217,19 +223,30 @@ footer {
 }
 .cards {
     background-color: #F6F6F6;
-    border-radius: 20px 20px 0 0;
+    border-radius: 50px 50px 0 0;
     padding: 0 20px 40px 20px;
+    margin-top: -40px;
+    position: relative;
 }
 .restaurant {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+    &__name {
+        font-family: 'Shrikhand', cursive;
+        font-size: 28px;
+        padding: 40px 0 30px 0;
+    }
 }
 .menu_meal {
     padding-bottom: 10px;
     &__name {
     padding: 5px 0 5px 0;
-    border-bottom: 3px solid #99E2D0;
+    }
 }
+hr {
+    border: 2px solid #99E2D0;
+    width:35px;
 }
 .meal {
     background-color: white;
@@ -238,15 +255,50 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 12px;
     margin: 15px 0 15px 0;
     border-radius: 15px;
     box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
     font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    &:hover .check_anim {
+        transform: translate(-60px);
+    }
+    &:hover .fa-circle-check{
+        transform: rotate(360deg);
+    }
     p {
         padding-top: 5px;
+    }
+    &__name {
+        padding: 12px;
+    }
+    &__price {
+        padding: 12px;
+        transition: transform 500ms ease-in-out;
+    }
+    &:hover &__price {
+        transform: translate(-60px);
     }
 }
 .btn_command {
     margin: 20px auto;
+}
+
+/*début des animations*/
+
+.check_anim {
+    position: absolute;
+    right: -60px;
+    height: 68px;
+    width: 58px;
+    background-color: #99E2D0;
+    @include flexmid;
+    border-radius: 0 15px 15px 0;
+    transition: transform 400ms ease-in-out;
+}
+.fa-circle-check {
+    color: white;
+    font-size: 22px;
+    transition: transform 400ms 200ms ease-in-out;
 }
