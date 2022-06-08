@@ -209,8 +209,13 @@ footer a {
 }
 
 /*mise en page menus*/
-.header a {
-  font-size: 26px;
+.fa-arrow-left {
+  position: absolute;
+  top: 7px;
+  left: 15px;
+  font-size: 22px;
+  color: black;
+  padding: 15px;
 }
 
 .restaurant_img img {
@@ -251,12 +256,12 @@ hr {
 }
 
 .meal {
-  background-color: white;
-  height: 68px;
-  max-width: 400px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  background-color: white;
+  height: 68px;
+  max-width: 400px;
   margin: 15px 0 15px 0;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
@@ -264,24 +269,35 @@ hr {
   position: relative;
   overflow: hidden;
 }
+.meal p {
+  padding-top: 5px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.meal h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.meal__name {
+  display: block;
+  padding: 12px 0 12px 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.meal__price {
+  display: block;
+  padding: 0px 12px 12px 10px;
+  transition: all 430ms ease-in-out;
+}
+.meal:hover .meal__price {
+  transform: translate(-60px);
+  padding-left: 65px;
+}
 .meal:hover .check_anim {
   transform: translate(-60px);
 }
 .meal:hover .fa-circle-check {
   transform: rotate(360deg);
-}
-.meal p {
-  padding-top: 5px;
-}
-.meal__name {
-  padding: 12px;
-}
-.meal__price {
-  padding: 12px;
-  transition: transform 500ms ease-in-out;
-}
-.meal:hover .meal__price {
-  transform: translate(-60px);
 }
 
 .btn_command {
@@ -299,13 +315,13 @@ hr {
   justify-content: center;
   align-items: center;
   border-radius: 0 15px 15px 0;
-  transition: transform 400ms ease-in-out;
+  transition: transform 350ms ease-in-out;
 }
 
 .fa-circle-check {
   color: white;
   font-size: 22px;
-  transition: transform 400ms 200ms ease-in-out;
+  transition: transform 350ms 100ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
