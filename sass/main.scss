@@ -34,14 +34,14 @@ header img {
 }
 form {
     font-size: 16px;
+    margin-left: 50px;
 }
 #search {
     background-color: #EAEAEA;
-    border: #EAEAEA;
-    padding: 5px 15px 5px 15px;
+    border: none;
+    padding: 5px 0px 5px 15px;
     font-family: 'Roboto';
     font-weight: 600;
-    
 }
 .intro {
     height: 286px;
@@ -126,9 +126,6 @@ form {
     h2 {
         font-weight: 800;
         margin: 10px 0 20px 0;
-    }
-    &__list {
-        
     }
 }
 
@@ -300,6 +297,9 @@ hr {
 .btn_command {
     margin: 20px auto;
 }
+.fa-heart {
+    font-size: 30px;
+}
 
 /*début des animations*/
 
@@ -317,4 +317,23 @@ hr {
     color: white;
     font-size: 22px;
     transition: transform 350ms 100ms ease-in-out;
+}
+.empty {
+    transform: translateX(36px);
+    opacity: 1;
+    transition: opacity 400ms ease-in-out;
+    &:hover {
+        opacity: 0;
+    }
+    &:hover+.full {
+        transform: scale(1);
+    }
+}
+.full {
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: transform 400ms ease-in-out;
+    background: linear-gradient($color-primary,$color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
