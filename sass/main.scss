@@ -355,31 +355,13 @@ hr {
 .meal {
     animation: meal-animation 600ms 100ms ease-in-out;
     animation-fill-mode: both;
+    @for $i from 1 through 9 {
+        &--#{$i} {
+            animation-delay: 100ms * $i;
+        }
+    }
 }
-.meal-2 {
-    animation-delay: 200ms;
-}
-.meal-3 {
-    animation-delay: 300ms;
-}
-.meal-4 {
-    animation-delay: 400ms;
-}
-.meal-5 {
-    animation-delay: 500ms;
-}
-.meal-6 {
-    animation-delay: 600ms;
-}
-.meal-7 {
-    animation-delay: 700ms;
-}
-.meal-8 {
-    animation-delay: 800ms;
-}
-.meal-9 {
-    animation-delay: 900ms;
-}
+
 
 
 /*media queries*/
