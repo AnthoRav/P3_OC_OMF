@@ -16,11 +16,13 @@ $color-tertiary: #99E2D0;
 }
 .page {
     max-width: 1400px;
+    margin: auto;
 }
 
 header {
     height: 63px;
     @include flexmid;
+    position: relative;
 }
 header img {
     height: 32px;
@@ -70,6 +72,10 @@ form {
     border-radius: 50px;
     margin: 20px 0 40px 0;
     box-shadow: 0px 0px 10px 5px rgba(208, 208, 208, 0.65);
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0px 0px 10px 8px rgba(208, 208, 208, 0.85);
+    }
 }
 
 .restaurants, .intro, .steps__card {
@@ -77,8 +83,7 @@ form {
 }
 
 .working {
-    height: 440px;
-    margin: 30px 20px 0 20px;
+    margin: 30px 20px 50px 20px;
     h2 {
         font-weight: 800;
         padding: 20px 0 20px 0;
@@ -131,7 +136,7 @@ form {
 
 .card {
     height: 250px;
-    max-width: 500px;
+    max-width: 460px;
     border-radius: 20px;
     margin-bottom: 20px;
     background-color: white;
@@ -236,7 +241,7 @@ footer {
     justify-content: space-between;
     &__name {
         font-family: 'Shrikhand', cursive;
-        font-size: 28px;
+        font-size: 26px;
         padding: 40px 0 30px 0;
     }
 }
@@ -336,4 +341,112 @@ hr {
     background: linear-gradient($color-primary,$color-secondary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+@keyframes meal-animation {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.meal {
+    animation: meal-animation 600ms 100ms ease-in-out;
+    animation-fill-mode: both;
+}
+.meal-2 {
+    animation-delay: 200ms;
+}
+.meal-3 {
+    animation-delay: 300ms;
+}
+.meal-4 {
+    animation-delay: 400ms;
+}
+.meal-5 {
+    animation-delay: 500ms;
+}
+.meal-6 {
+    animation-delay: 600ms;
+}
+.meal-7 {
+    animation-delay: 700ms;
+}
+.meal-8 {
+    animation-delay: 800ms;
+}
+.meal-9 {
+    animation-delay: 900ms;
+}
+
+
+/*media queries*/
+
+@media screen and (min-width: 500px) {
+    .steps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__card {
+            width: 380px;
+        }
+    }
+    .restaurants__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 460px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_meal {
+            width: 350px;
+            margin: 0 20px 0 20px;
+        }
+    }
+    .meal {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .steps {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 40px;
+        &__card {
+            margin-right: 20px;
+        }
+        i {
+            left: 40px;
+        }
+    }
+    .restaurants__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .card {
+        margin-bottom: 50px;
+    }
+    .menu {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+        &_meal {
+            width: 30%;
+        }
+    }
+    .restaurant__name {
+        padding-left: 20px;
+    }
+    .btn {
+        margin-top: 40px;
+    }
 }
