@@ -398,6 +398,35 @@ hr {
   animation-delay: 900ms;
 }
 
+/*Loader*/
+@keyframes loading-screen {
+  0%, 85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(170deg, #FF79DA, #9356DC);
+  animation: loading-screen 2500ms ease-in both;
+}
+.loader h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 34px;
+  font-weight: 500;
+}
+
 /*media queries*/
 @media screen and (min-width: 500px) {
   .steps {
