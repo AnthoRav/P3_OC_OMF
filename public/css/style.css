@@ -107,6 +107,12 @@ form {
   position: relative;
   box-shadow: 0px 0px 10px 2px rgba(208, 208, 208, 0.55);
 }
+.steps__card:hover {
+  background-color: #F5EDFF;
+}
+.steps__card:hover i {
+  color: #9356DC;
+}
 .steps__card--number {
   background-color: #9356DC;
   font-size: 14px;
@@ -405,7 +411,7 @@ hr {
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    z-index: -1;
   }
 }
 .loader {
