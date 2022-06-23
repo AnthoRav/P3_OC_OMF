@@ -1,0 +1,35 @@
+.check_anim {
+    position: absolute;
+    right: -60px;
+    height: 68px;
+    width: 58px;
+    background-color: #99E2D0;
+    @include flexmid;
+    border-radius: 0 15px 15px 0;
+    transition: transform 350ms ease-in-out;
+}
+.fa-circle-check {
+    color: white;
+    font-size: 22px;
+    transition: transform 350ms 100ms ease-in-out;
+}
+
+@keyframes meal-animation {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.meal {
+    animation: meal-animation 600ms 100ms ease-in-out;
+    animation-fill-mode: both;
+    @for $i from 1 through 9 {
+        &--#{$i} {
+            animation-delay: 100ms * $i;
+        }
+    }
+}

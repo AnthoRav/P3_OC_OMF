@@ -1,0 +1,28 @@
+@keyframes loading-screen {
+    0%, 85% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+.loader {
+    @include flexmid;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    background: linear-gradient(170deg, $color-secondary, $color-primary);
+    animation: loading-screen 2500ms ease-in both;
+    h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 34px;
+    font-weight: 500;
+    }
+}
+

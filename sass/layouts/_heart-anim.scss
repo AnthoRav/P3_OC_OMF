@@ -1,0 +1,19 @@
+.empty {
+    transform: translateX(36px);
+    opacity: 1;
+    transition: opacity 400ms ease-in-out;
+    &:hover {
+        opacity: 0;
+    }
+    &:hover+.full {
+        transform: scale(1);
+    }
+}
+.full {
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: transform 400ms ease-in-out;
+    background: linear-gradient($color-primary,$color-secondary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

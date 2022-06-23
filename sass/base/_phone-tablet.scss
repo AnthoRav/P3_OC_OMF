@@ -1,0 +1,36 @@
+@media screen and (max-width: 400px) {
+    .steps__card i {
+        left: 35px;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .steps {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &__card {
+            width: 380px;
+        }
+    }
+    .restaurants__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 460px;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &_meal {
+            width: 350px;
+            margin: 0 20px 0 20px;
+        }
+    }
+    .meal {
+        width: 100%;
+    }
+}

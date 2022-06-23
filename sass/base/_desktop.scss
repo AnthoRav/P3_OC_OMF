@@ -1,0 +1,35 @@
+@media screen and (min-width: 992px) {
+    .steps {
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 40px;
+        &__card {
+            margin-right: 20px;
+        }
+        i {
+            left: 40px;
+        }
+    }
+    .restaurants__list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .card {
+        margin-bottom: 50px;
+    }
+    .menu {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: baseline;
+        &_meal {
+            width: 30%;
+        }
+    }
+    .restaurant__name {
+        padding-left: 20px;
+    }
+    .btn {
+        margin-top: 40px;
+    }
+}

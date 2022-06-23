@@ -1,0 +1,9 @@
+header {
+    height: 63px;
+    @include flexmid;
+    position: relative;
+}
+header img {
+    height: 32px;
+}
+
