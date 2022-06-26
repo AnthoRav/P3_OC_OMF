@@ -88,6 +88,14 @@
   .btn {
     margin-top: 40px;
   }
+
+  html {
+    background: linear-gradient(170deg, #FF79DA, #9356DC);
+  }
+
+  body {
+    background: white;
+  }
 }
 .btn {
   display: flex;
